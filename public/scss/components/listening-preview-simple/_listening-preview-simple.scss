@@ -1,0 +1,155 @@
+.listening-preview-simple-wrapper {
+}
+
+.listening-preview-simple {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  position: relative;
+  &:last-child {
+    border-bottom: 0;
+  }
+  @include mq('tablet-wide', max) {
+    display: block;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    &_name {
+
+    }
+    &_controls {
+      @include mq('tablet-wide', max) {
+        background-color: #eee;
+        padding: 20px 10px;
+        border-radius: 0 14px 14px 14px;
+      }
+    }
+  }
+  &__photo-block {
+    flex: none;
+  }
+  &__headline-block {
+    flex: none;
+    width: 50%;
+    margin-right: 16px;
+    margin-left: 16px;
+    @include mq('tablet-wide', max) {
+    }
+    @include mq('phone', max) {
+      max-width: 90%;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
+  &__items-block {
+    width: 100%;
+  }
+  &__price-block {
+    flex: none;
+    margin-left: 16px;
+    .price__text {
+      display: flex;
+    }
+  }
+  &__control-block {
+    position: absolute;
+    right: -50px;
+    // height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    @include mq('tablet-wide', max) {
+      position: static;
+      right: auto;
+      top: auto;
+      transform: none;
+    }
+  }
+  @include mq('phone', max) {
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+}
+.preview-simple-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  height: 70px;
+  width: 100px;
+  &:hover {
+    cursor: pointer;
+  }
+  @include mq('phone', max) {
+    width: 70px;
+  }
+}
+.preview-simple-headline {
+  &__head {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    max-height: 23px;
+    overflow: hidden;
+    display: block;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    @include mq('phone', max) {
+      font-size: 16px;
+      max-height: 39px;
+      line-height: 18px;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    font-weight: normal;
+    @include mq('phone', max) {
+      font-size: 12px;
+    }
+  }
+}
+
+.preview-simple-items {
+  text-align: right;
+  width: 100%;
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+    &_eye-icon {
+      display: flex;
+      align-items: center;
+    }
+    &_edit-icon {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+    @include mq('phone', max) {
+      margin-right: 16px;
+    }
+  }
+  @include mq('tablet-wide', max) {
+    text-align: left;
+  }
+}
