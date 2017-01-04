@@ -1,0 +1,59 @@
+.panel-wrapper {
+  position: relative;
+  margin-top: 26px;
+}
+
+.panel-headline {
+  &__headline {
+    
+  }
+  &__desc {
+    font-weight: normal;
+    font-size: 23px;
+    color: lighten(black, 10%);
+  }
+}
+
+.panel-headline-icon {
+  display: inline-block;
+  background-color: transparent;
+  svg {fill: gray;}
+  &_edit {
+    svg {fill: $accent-blue;}
+  }
+  &_done {
+    svg {fill: green;}
+  }
+  &--hide {
+    display: none;
+  }
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.panel-controls {
+  margin: 16px 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    color: gray;
+    font-size: 12px;
+    margin-right: 16px;
+    @include mq('tablet-wide', max) {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 16px;
+
+    }
+  }
+  @include mq('tablet-wide', max) {
+    text-align: center;
+    margin: 32px 0;
+  }
+}
