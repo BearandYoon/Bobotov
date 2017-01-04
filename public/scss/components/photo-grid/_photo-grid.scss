@@ -1,0 +1,103 @@
+.photo-grid {
+  .listening-preview {
+    transition: transform .2s;
+    &:hover {
+      cursor: pointer;
+      .listening-preview-header {
+        display: flex;
+      }
+      .listening-preview-footer {
+        display: block;
+      }
+    }
+    &:active {
+      transform: scale(0.99);
+    }
+    .listening-preview-headline__text {
+      font-size: 14px;
+      line-height: 13px;
+      max-height: 13px;
+      overflow: hidden;
+    }
+    .listening-preview-footer {
+      display: none;
+      .listening-preview-params {
+        display: none;
+      }
+    }
+    .listening-preview-header {
+      &:after {
+        content: none;
+      }
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      &__item {
+        display: block;
+        margin-bottom: 10px;
+        .price {
+          flex: none;
+          padding: 0;
+          background-color: transparent;
+          // display: inline-block;
+          &__text {
+            font-size: 18px;
+            .currency {
+              svg {
+                width: 12px;
+                height: 12px;
+              }
+            }  
+          }
+          &__desc {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  // align-items: flex-start;
+  justify-content: flex-start;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  &__item {
+    -ms-flex: 1 1 100%;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-basis: calc((100% - 0.1px - (5px * 3)) / 3);
+    flex-basis: calc((100% - 0.1px - (5px * 3)) / 3);
+    max-width: calc((100% - 0.1px - (5px * 3)) / 3);
+    margin-bottom: 5px;
+    margin-right: 5px;
+    height: 250px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    @include mq('tablet-wide', max) {
+      flex-basis: calc((150% - 0.1px - (5px * 3)) / 3);
+      max-width: calc((150% - 0.1px - (5px * 3)) / 3);
+    }
+    @include mq('tablet-small', max) {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+    @include mq('phone-wide', max) {
+      height: 290px;
+    }
+  }
+  @include mq('tablet-small', max) {
+    display: block;
+  }
+}
