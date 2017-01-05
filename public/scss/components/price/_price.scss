@@ -1,0 +1,47 @@
+.price {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: $accent-blue;
+  &__text {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+    @include mq('tablet-small', max) {
+      font-size: 18px;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    color: white;
+    font-weight: normal;
+    text-align: right;
+    @include mq('tablet-small', max) {
+      font-size: 13px;
+    }
+  }
+  @include mq('phone', max) {
+    padding: 8px;
+  }
+}
+
+.currency {
+  display: inline-block;
+  margin-left: 5px;
+  // vertical-align: middle;
+  svg {
+    display: block;
+    fill: white;
+    height: 15px;
+    width: 15px;
+    @include mq('tablet-small', max) {
+      height: 10px;
+      width: 10px;
+    }
+    
+  }
+}
+
+.currency-as-font {
+  display: none;
+}
