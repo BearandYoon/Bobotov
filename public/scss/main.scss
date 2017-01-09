@@ -1,0 +1,56 @@
+//All import
+@import "vars";
+@import "reset";
+@import "mixins";
+@import "base";
+@import "keyframes";
+@import "other/all";
+//Libs
+@import "libs/react-image-gallery/all";
+@import "libs/semantic.min";
+@import "libs/slick/all";
+//Components import
+@import "components/all";
+//Print styles
+@import "other/print";
+
+
+.interface-width {
+  margin: 0 auto;
+  width: 1024px;
+  height: 100%;
+  position: relative;
+  @include mq('tablet-wide', max) {
+    width: 100%;
+  } 
+}
+
+.center-wrapper {
+  display: flex;
+  .center {
+    margin: auto;
+    @include mq('tablet-small', max) {
+      width: 100%;
+    }
+  }
+}
+.history-clear-btn {
+  margin-right: 0;
+}
+
+.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.loved {
+  fill: $love-color;
+}
+
+.page-appear {
+   opacity: 0.01;
+}
+
+.page-appear.page-appear-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}
