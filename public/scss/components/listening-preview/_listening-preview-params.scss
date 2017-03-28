@@ -1,0 +1,23 @@
+.listening-preview-params {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-right: 32px;
+  }
+  @include mq('tablet-wide', max) {
+    display: none;
+  }
+}
+.params-icon, .params-text {
+  color: white;
+}
+.params-icon {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.params-text {
+  font-size: 16px;
+  font-weight: bold;
+}

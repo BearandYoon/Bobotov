@@ -1,0 +1,29 @@
+.listening-info-header {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    .large-headline {
+      margin-bottom: 5px;
+      max-width: 800px;
+      line-height: 42px;
+      @include mq('tablet-small', max) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+    .medium-parag {
+      font-size: 12px;
+      margin-bottom: 5px;
+      line-height: 16px;
+    }
+  }
+  &__item_headline {
+    max-width: 80%;
+    margin-right: 10px;
+  }
+  &__item_price {
+    @include mq('tablet-wide', max) {
+      flex: none;
+    }
+  }
+}

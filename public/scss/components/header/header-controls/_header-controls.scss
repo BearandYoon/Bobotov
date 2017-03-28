@@ -1,0 +1,42 @@
+.header-controls {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  &__item {
+    .transparent-btn {
+      margin-right: 10px;
+      @include mq('phone', max) {
+        margin-right: 7px;
+        padding: 6px;
+        font-size: 11px;
+        display: none;
+      }
+    }
+    .simple-btn_blue {
+      @include mq('phone', max) {
+        padding: 8px;
+        font-size: 11px;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .profile {
+      margin: 0;
+    }
+    .profile-name, .profile-desc { //hide username and userdesc
+      @include mq('phone', max) {
+        display: none;
+      }
+    }
+  }
+  &__item_add {
+    margin-left: 16px;
+    @include mq('tablet-wide', max) {
+      margin-left: 16px;
+    }
+    @include mq('tablet-small', max) {
+      display: none;
+    }
+  }
+}

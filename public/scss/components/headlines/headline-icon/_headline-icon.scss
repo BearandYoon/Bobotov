@@ -1,0 +1,39 @@
+.headline-icon {
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    svg {
+      width: 28px;
+      height: 28px;
+      @include mq('phone', max) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @include mq('phone', max) {
+      width: 20px;
+      height: 23px;
+    }
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 24px;
+    @include mq('phone', max) {
+      font-size: 20px;
+    }
+  }
+}
+
+.headline-icon--hot {
+  .headline-icon__icon {
+    margin-right: 5px;
+    svg {
+      fill: orange;
+    }
+  }
+}

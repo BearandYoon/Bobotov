@@ -1,0 +1,22 @@
+.listening-preview-headline {
+  margin-right: 16px;
+  &__text {
+    word-break: break-word;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 5px;
+    @include mq('phone', max) {
+      font-size: 14px;
+    }
+  }
+  &__desc {
+    font-weight: normal;
+    font-size: 14px;
+    color: white;
+    @include mq('phone', max) {
+      font-size: 12px;
+    }
+  }
+}
+
